@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
@@ -7,6 +8,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+
 
 /* ─────────────────────────────────────────────
    Reusable fade-up animation variant
@@ -151,7 +153,7 @@ const ContactUs = () => {
 
     setStatus('loading');
     try {
-      const res = await axios.post('http://localhost:5000/api/contact', {
+      const res = await axios.post(`${API}/api/contact`, {
         name: formData.name,
         email: formData.email,
         brand: formData.brand || formData.phone,

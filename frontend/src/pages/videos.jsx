@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Play, Upload, X } from 'lucide-react';
@@ -5,12 +6,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+
 const getFullUrl = (urlPath) => {
   if (!urlPath) return '';
   if (urlPath.startsWith('http://') || urlPath.startsWith('https://')) {
     return urlPath;
   }
-  return `http://localhost:5000${urlPath}`;
+  return `${API}${urlPath}`;
 };
 
 const VideoCard = ({ video, index, onSelect }) => {
@@ -124,7 +126,7 @@ const VideosPage = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/videos');
+        const res = await axios.get(`${API}/api/videos`);
         setVideos(res.data.data);
       } catch (err) {
         setVideos([

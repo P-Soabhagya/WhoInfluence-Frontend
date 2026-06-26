@@ -1,6 +1,8 @@
+const API = import.meta.env.VITE_API_URL;
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+
 import { Users, TrendingUp, Eye, ArrowRight } from 'lucide-react';
 
 const Campaigns = () => {
@@ -10,7 +12,7 @@ const Campaigns = () => {
   useEffect(() => {
     const fetchCampaigns = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/campaigns');
+        const res = await axios.get(`${API}/api/campaigns`);
         setCampaigns(res.data.data);
       } catch (err) {
         console.error("Failed to fetch campaigns", err);

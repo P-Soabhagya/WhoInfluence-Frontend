@@ -1,7 +1,9 @@
+const API = import.meta.env.VITE_API_URL;
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { X, Send, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 
 const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -78,7 +80,7 @@ const ContactModal = ({ isOpen, onClose }) => {
     setStatus('loading');
     
     try {
-      const res = await axios.post('http://localhost:5000/api/contact', {
+      const res = await axios.post(`${API}/api/contact`, {
         name: formData.name,
         email: formData.email,
         brand: formData.brand || formData.phone,

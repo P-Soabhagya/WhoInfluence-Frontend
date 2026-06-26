@@ -1,7 +1,9 @@
+const API = import.meta.env.VITE_API_URL;
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, X, Star, Camera, Video } from 'lucide-react';
 import testimonialVideos from '../data/testimonialvideos.json';
+
 
 // ─── Creators Data ─────────────────────────────
 const creators = [
@@ -84,7 +86,7 @@ const creatorsWithVideos = creators.map(c => {
   const video = testimonialVideos.find(v => v.id === c.id) || {};
   return {
     ...c,
-      videoUrl: video.videoUrl ? `http://localhost:5000${video.videoUrl}` : null,
+      videoUrl: video.videoUrl ? `${API}${video.videoUrl}` : null,
     description: video.description ?? '',
   };
 });

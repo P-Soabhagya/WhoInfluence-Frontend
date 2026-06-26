@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -5,6 +6,7 @@ import {
   Send, Loader2, Award, Sparkles, MessageCircle, ArrowRight, CheckCircle2 
 } from 'lucide-react';
 import axios from 'axios';
+
 import Navbar from '../components/Navbar';
 
 const CAROUSEL_VIDEOS = [];
@@ -15,7 +17,7 @@ const BRAND_LOGOS = [];
 const HERO_VIDEOS = [
   {
     id: 'hero-1',
-    src: 'http://localhost:5000/videos/FeaturedVideos/1.mp4',
+    src: `${API}/videos/FeaturedVideos/1.mp4`,
     title: 'Real UGC',
     creator: '',
     border: 'border-orange-500/40 shadow-orange-500/10',
@@ -25,7 +27,7 @@ const HERO_VIDEOS = [
   },
   {
     id: 'hero-2',
-    src: 'http://localhost:5000/videos/FeaturedVideos/2.mp4',
+    src: `${API}/videos/FeaturedVideos/2.mp4`,
     title: 'Real creators',
     creator: '',
     border: 'border-amber-500/40 shadow-amber-500/10',
@@ -35,7 +37,7 @@ const HERO_VIDEOS = [
   },
   {
     id: 'hero-3',
-    src: 'http://localhost:5000/videos/FeaturedVideos/3.mp4',
+    src: `${API}/videos/FeaturedVideos/3.mp4`,
     title: 'Choose from 3000+',
     creator: '',
     border: 'border-amber-500/40 shadow-amber-500/10',
@@ -45,7 +47,7 @@ const HERO_VIDEOS = [
   },
   {
     id: 'hero-4',
-    src: 'http://localhost:5000/videos/FeaturedVideos/4.mp4',
+    src: `${API}/videos/FeaturedVideos/4.mp4`,
     title: 'Authentic engagement',
     creator: '',
     border: 'border-orange-500/40 shadow-orange-500/10',

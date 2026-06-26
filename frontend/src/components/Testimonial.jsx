@@ -1,7 +1,9 @@
+const API = import.meta.env.VITE_API_URL;
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 
 // Helper to classify brand vs creator deterministically based on ID/Name/Role
 const getReviewerBadge = (item) => {
@@ -86,7 +88,7 @@ const ReviewModal = ({ isOpen, onClose, onSuccess }) => {
     setStatus('loading');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/testimonials', formData);
+      const res = await axios.post(`${API}/api/testimonials`, formData);
       setStatus('success');
       setMessage('Review published successfully!');
       onSuccess(res.data.data);
@@ -298,7 +300,7 @@ const Testimonial = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/testimonials');
+        const res = await axios.get(`${API}/api/testimonials`);
         setTestimonials(res.data.data);
       } catch {
         setTestimonials([

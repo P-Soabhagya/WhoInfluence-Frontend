@@ -1,7 +1,9 @@
+const API = import.meta.env.VITE_API_URL;
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Send, Loader2, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 
 export const InfluencerForm = ({ theme = 'light', onSuccess }) => {
   const [formData, setFormData] = useState({
@@ -65,7 +67,7 @@ export const InfluencerForm = ({ theme = 'light', onSuccess }) => {
     setStatus('loading');
     
     try {
-      const res = await axios.post('http://localhost:5000/api/influencer', {
+      const res = await axios.post('${API}/api/influencer', {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
