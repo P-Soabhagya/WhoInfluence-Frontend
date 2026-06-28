@@ -16,7 +16,7 @@ const creators = [
     rating: 5,
     quote: 'WhoInfluence connected me with brands that truly aligned with my audience. Every campaign felt authentic!',
     videoId: '',
-    thumbnail: '/testimonialvideos/testimonial-1.mp4',
+    thumbnail: '/testimonialVideos/testimonial-1.mp4',
     accent: '#f97316',
   },
   {
@@ -263,7 +263,7 @@ const VideoModal = ({ creator, onClose }) => {
   if (!creator) return null;
 
   // Support local .mp4 videos (from JSON) and YouTube video IDs
-  const isLocalVideo = creator.videoUrl && (creator.videoUrl.startsWith('http://localhost') || !creator.videoUrl.startsWith('http'));
+  const isLocalVideo = !!creator.videoUrl;
   const embedUrl = !isLocalVideo && creator.videoId
     ? `https://www.youtube.com/embed/${creator.videoId}?autoplay=1&rel=0`
     : null;
