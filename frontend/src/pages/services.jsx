@@ -838,7 +838,7 @@ const ServicesPage = () => {
             >
               <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
               <span className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase text-orange-600">
-                India's Best Influencer Marketing Agency
+                India's Top Marketing Agency
               </span>
             </motion.div>
 
@@ -1150,7 +1150,7 @@ const ServicesPage = () => {
               <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-orange-500/25 bg-orange-500/[0.08] mb-8">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 <span className="text-xs font-black tracking-[0.2em] uppercase text-orange-400">
-                  Scale Your Brand with Creators
+                  Grow with Creators
                 </span>
               </div>
 

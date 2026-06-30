@@ -46,7 +46,7 @@ const TrustedBrands = () => {
         >
           <div className="inline-block relative">
             <span className="text-xs md:text-sm font-black tracking-[0.45em] uppercase font-['Outfit'] bg-gradient-to-r from-slate-400 via-slate-600 to-slate-400 bg-clip-text text-transparent">
-              Trusted by World-Class Brands
+              Trusted by Leading Brands
             </span>
             <div className="absolute -bottom-2 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-[#FF8A3D]/45 to-transparent blur-[0.5px]"></div>
           </div>
