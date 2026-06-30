@@ -67,7 +67,7 @@ export const InfluencerForm = ({ theme = 'light', onSuccess }) => {
     setStatus('loading');
     
     try {
-      const res = await axios.post('${API}/api/influencer', {
+      const res = await axios.post(`${API}/api/influencer`, {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
