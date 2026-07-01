@@ -193,7 +193,7 @@ const AboutUs = () => {
               {[
                 {
                   title: "Brand Story",
-                  desc: "Every Great Brand Has a Story. We Help the Right People Tell It. WhoInfluence was founded on a simple insight: people trust creators more than traditional ads. We connect brands with the right creators to build authentic, impactful campaigns that drive trust, engagement, and growth. Today, we help businesses leverage the creator economy through transparent, performance-focused influencer marketing. Because influence isn't about reaching everyone. It's about earning the trust of the right audience.",
+                  desc: "Every Great Brand Has a Story. We Help the Right People Tell It. We're an influencer marketing team connecting brands with the right creators to build authentic, high-impact campaigns. Through creator expertise, audience insights, and performance-driven strategies, we help businesses earn trust, drive engagement, and grow in the creator economy.",
                   icon: BookOpen,
                 },
                 {
